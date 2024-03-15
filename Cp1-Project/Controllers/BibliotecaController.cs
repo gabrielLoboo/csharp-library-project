@@ -14,8 +14,8 @@ namespace Cp1_Project.Controllers
             // Inicializando a lista de itens da biblioteca (simulação)
             _bibliotecaItems = new List<IBibliotecaItem>
             {
-                 new Livro("Book", "John Doe", 123456),
-                new Gibi("Magazine", "Publisher X", 10)
+                 new Livro("Harry Potter", "J. K. Rowling", 123456),
+                new Gibi("Turma da monica", "Panini", 10)
             };
         }
 
