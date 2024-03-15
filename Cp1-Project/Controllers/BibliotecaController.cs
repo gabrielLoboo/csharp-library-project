@@ -11,7 +11,7 @@ namespace Cp1_Project.Controllers
 
         public BibliotecaController()
         {
-            // Inicializando a lista de itens da biblioteca (simulação)
+            
             _bibliotecaItems = new List<IBibliotecaItem>
             {
                  new Livro("Harry Potter", "J. K. Rowling", 123456),
