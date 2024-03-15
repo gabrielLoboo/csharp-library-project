@@ -1,0 +1,27 @@
+﻿@using Cp1_Project.Interfaces
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IEnumerable<IBibliotecaItem>
+
+<h1>Biblioteca</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Detalhes</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Titulo</td>
+                <td><a asp-action="Details" asp-route-id="@item">Detalhes</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

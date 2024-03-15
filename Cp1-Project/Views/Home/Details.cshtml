@@ -1,0 +1,24 @@
+﻿@model Cp1_Project.Interfaces.IBibliotecaItem
+
+@{
+    Layout = "_Layout";
+}
+
+<h1>Detalhes do Item da Biblioteca</h1>
+
+<div>
+    <h4>Título: @Model.Titulo</h4>
+    <p>Informações Adicionais:</p>
+    @if (Model is Cp1_Project.Models.Livro)
+    {
+        var livro = Model as Cp1_Project.Models.Livro;
+        <p>Autor: @livro.Autor</p>
+        <p>ISBN: @livro.ISBN</p>
+    }
+    else if (Model is Cp1_Project.Models.Gibi)
+    {
+        var gibi = Model as Cp1_Project.Models.Gibi;
+        <p>Editora: @gibi.Editora</p>
+        <p>Número de Emissão: @gibi.Numero_Emissao</p>
+    }
+</div>
